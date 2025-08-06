@@ -266,4 +266,64 @@ body {
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
+/* Reduce overall header height */
+.navbar {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 
+/* Reduce brand logo size slightly */
+.navbar-brand img {
+  width: 80px; /* previously 100px */
+}
+
+/* Increase spacing between menu items */
+.navbar-nav .nav-link {
+  margin-right: 35px;  /* increased from 25px */
+  font-size: 20px;     /* keep it big */
+}
+
+/* Ensure alignment stays clean */
+.navbar .container-fluid {
+  max-width: 95%;  /* reduce header width */
+}
+/* Navbar links container */
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+/* Space links more evenly */
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;   /* Adjust width to spread links properly */
+}
+
+/* Bigger text */
+.navbar-nav .nav-link {
+  font-size: 22px;
+  padding: 10px 20px;
+}
+.navbar .container {
+  padding-left: 30px; /* Adjust space from left edge */
+}
+.booking-box {
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 300px;
+  z-index: 100;
+}
+/* Force 3-column layout for reviews */
+.customer-reviews .col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+/* Make cards equal height */
+.customer-reviews .d-flex {
+  display: flex;
+  align-items: stretch;
+}
