@@ -53,93 +53,12 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 
-  <!-- Booking Form Floating -->
-  <div class="booking-box card p-4 shadow position-absolute">
-    <h5 class="text-center mb-3 text-success">Book Your Ride</h5>
-    <form id="bookingForm">
-
-      <!-- Full Name -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-user input-icon"></i>
-        <input type="text" class="form-control" name="name" id="name"
-          placeholder="Full Name" pattern="[A-Za-z\s]+"
-          title="Only Alphabets allowed" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Mobile Number -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-phone input-icon"></i>
-        <input type="tel" class="form-control" name="phone" id="phone"
-          placeholder="Mobile Number" pattern="[0-9+]+"
-          title="Only Numbers allowed" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Location -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-location-dot input-icon"></i>
-        <input type="text" class="form-control" placeholder="Pickup Location"
-          name="pickup" id="pickup" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Drop Location -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-map-marker-alt input-icon"></i>
-        <input type="text" class="form-control" placeholder="Drop Location"
-          name="drop" id="drop" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Date -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-calendar-days input-icon"></i>
-        <input type="date" class="form-control" name="date" id="date" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Time -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-clock input-icon"></i>
-        <input type="time" class="form-control" name="time" id="time" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Book Now -->
-      <button type="submit" id="bookNowBtn" class="btn btn-success w-100" disabled>
-        Book Now
-      </button>
-    </form>
-  </div>
+  <div class="hero-overlay">
+  <h1 class="hero-title">Travel with Comfort</h1>
+  <p class="hero-subtitle">Reliable Taxi Service Anytime</p>
+  <a href="booking.html" class="btn btn-book-now">Book Now</a>
 </div>
 
-<!-- Mobile Book Now Button -->
-<button class="mobile-book-btn" data-bs-toggle="modal" data-bs-target="#mobileBookingModal">
-  <i class="fa-solid fa-taxi me-2"></i> Book Now
-</button>
-
-<!-- Mobile Booking Modal -->
-<div class="modal fade" id="mobileBookingModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-success">Book Your Ride</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3 position-relative"><i class="fa-solid fa-user input-icon"></i><input type="text" class="form-control" placeholder="Name"></div>
-          <div class="mb-3 position-relative"><i class="fa-solid fa-phone input-icon"></i><input type="text" class="form-control" placeholder="Mobile Number"></div>
-          <div class="mb-3 position-relative"><i class="fa-solid fa-location-dot input-icon"></i><input type="text" class="form-control" placeholder="Pickup Location"></div>
-          <div class="mb-3 position-relative"><i class="fa-solid fa-map-marker-alt input-icon"></i><input type="text" class="form-control" placeholder="Drop Location"></div>
-          <div class="mb-3 position-relative"><i class="fa-solid fa-calendar-days input-icon"></i><input type="datetime-local" class="form-control"></div>
-          <button type="submit" class="btn btn-success w-100">Book Now</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Services Section -->
 <section class="services-section py-5 bg-light">
