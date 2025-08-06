@@ -341,10 +341,17 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 999;
+  z-index: 10; /* Lower than navbar but above carousel */
 }
 
 .hero-booknow-btn:hover {
   background-color: #218838;
   transform: translate(-50%, -50%) scale(1.05);
 }
+
+/* Ensure button does not overlap footer or other sections */
+.carousel {
+  position: relative;
+  min-height: 500px;
+}
+
