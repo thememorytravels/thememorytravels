@@ -92,7 +92,7 @@ body {
 =========================== */
 .booking-box {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 10%;
   transform: translateY(-50%);
   background: white;
