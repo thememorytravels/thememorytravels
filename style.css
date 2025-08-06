@@ -267,29 +267,3 @@ body {
   100% { transform: scale(1); }
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  z-index: 10;
-}
-
-.btn-book-now {
-  background-color: #ff5722;
-  color: white;
-  padding: 15px 40px;
-  font-size: 22px;
-  font-weight: bold;
-  border-radius: 8px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-book-now:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
-}
