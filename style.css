@@ -1,19 +1,19 @@
-/* Import font */
+/* Import unique font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: white;
   color: #333;
-  line-height: 1.6;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+/* Navbar */
 .navbar {
-  background-color: #014421 !important;
-  padding: 8px 20px;
+  background-color: #014421 !important; /* Dark leaf green */
+  padding: 15px 20px;
+  margin-bottom: 0;
+  position: relative;
+  top: 30px; /* keeps top info bar visible */
   width: 100%;
   z-index: 1000;
   transition: background 0.3s;
@@ -22,84 +22,94 @@ body {
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+  margin-left: 0;
+  padding-left: 0;
+}
+.navbar .container, 
+.navbar .container-fluid {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .navbar-brand img {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  line-height: 1.3;
 }
 
 .brand-name {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   color: white;
   text-transform: uppercase;
+  text-shadow: none; /* Removes black outline */
 }
 
 .brand-tagline {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 400;
   color: #f0f0f0;
 }
 
-.navbar-nav {
-  display: flex;
-  gap: 25px;
-}
-
 .navbar-nav .nav-link {
+  position: relative;
   padding: 10px 20px;
-  font-size: 18px;
+  margin-right: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: white !important;
+  display: flex;
+  align-items: center;
   transition: color 0.3s, transform 0.2s;
 }
 
+.navbar-nav .fa-angle-down {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
 .navbar-nav .nav-link:hover {
+  color: #fff !important;
   background-color: #198754;
   border-radius: 6px;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .navbar-nav .nav-link.active {
-  color: #ffcc00 !important;
+  color: red !important;
   font-weight: bold;
 }
 
-/* ===========================
-   CAROUSEL
-=========================== */
+/* Carousel */
+.carousel {
+  margin-top: 10px;
+}
+
 .carousel-item img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 300px;
-  }
-}
-
-/* ===========================
-   BOOKING BOX
-=========================== */
+/* Booking Box (Desktop) */
 .booking-box {
   position: absolute;
   top: 30%;
-  right: 10%;
-  transform: translateY(-50%);
+  right: 5%;
+  transform: translateY(-20%);
   background: white;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 320px;
+  z-index: 100;
 }
 
 .booking-box h5 {
@@ -108,16 +118,31 @@ body {
   color: #00b894;
 }
 
+.booking-box .form-control {
+  border-radius: 8px;
+  padding-left: 35px;
+}
+
+.booking-box .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00b894;
+}
+
 .booking-box button {
+  border-radius: 8px;
+  font-size: 16px;
   background-color: #00b894;
   border: none;
-  border-radius: 8px;
 }
 
 .booking-box button:hover {
   background-color: #019870;
 }
 
+/* Mobile Book Now Button */
 .mobile-book-btn {
   display: none;
   position: fixed;
@@ -125,6 +150,7 @@ body {
   right: 20px;
   background-color: #00b894;
   color: #fff;
+  border: none;
   padding: 12px 20px;
   border-radius: 50px;
   font-size: 18px;
@@ -132,14 +158,24 @@ body {
   z-index: 1000;
 }
 
+/* Mobile modal styling */
 @media (max-width: 768px) {
-  .booking-box { display: none; }
-  .mobile-book-btn { display: block; }
+  .booking-box {
+    display: none;
+  }
+  .mobile-book-btn {
+    display: block;
+  }
+  .modal-content {
+    border-radius: 12px;
+  }
 }
 
-/* ===========================
-   SERVICES
-=========================== */
+/* Services Section */
+.services-section h2 {
+  font-weight: bold;
+}
+
 .service-card {
   background: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -150,75 +186,85 @@ body {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ===========================
-   TARIFF
-=========================== */
-.table th, .table td {
-  vertical-align: middle;
-  font-size: 16px;
+/* Tariff Cards */
+.card img {
+  height: 200px;
+  object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .table-responsive { font-size: 14px; }
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn-outline-success {
+  color: #00b894;
+  border-color: #00b894;
+}
+
+.btn-outline-success:hover {
+  background-color: #00b894;
+  color: white;
+}
+
+/* Footer */
 .footer-section {
   background: linear-gradient(135deg, #00b894, #0984e3);
-  text-align: center;
-  padding: 20px;
 }
 
-.footer-section p {
-  margin: 0;
-  font-size: 15px;
+.footer-section h5 {
+  font-weight: bold;
 }
 
-/* ===========================
-   FLOATING BUTTONS
-=========================== */
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Floating Buttons */
 .float-whatsapp, .float-call {
   position: fixed;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
   text-align: center;
   font-size: 24px;
-  color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  z-index: 100;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
   animation: pulse 1.5s infinite;
 }
-
-.float-whatsapp { background-color: #25d366; bottom: 20px; right: 20px; }
-.float-call { background-color: #007bff; bottom: 80px; right: 20px; }
 
 .float-whatsapp:hover, .float-call:hover {
   transform: scale(1.1);
 }
 
+/* Call button slightly above WhatsApp */
+.float-call {
+  bottom: 80px;
+  right: 20px;
+  background-color: #007bff;
+}
+
+.float-whatsapp {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Pulse Animation */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
-}
-
-/* ===========================
-   REVIEWS
-=========================== */
-.customer-reviews .col-md-4 {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-}
-
-.customer-reviews .d-flex {
-  align-items: stretch;
 }
 
 .hero-overlay {
