@@ -1,7 +1,8 @@
 /* Import unique font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-body {
+html, body {
+  overflow-x: hidden;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: white;
   color: #333;
@@ -9,14 +10,21 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #014421 !important; /* Dark leaf green */
-  padding: 15px 20px;
+  background-color: #014421 !important;
+  padding: 8px 20px;
   margin-bottom: 0;
   position: relative;
-  top: 30px; /* keeps top info bar visible */
+  top: 30px;
   width: 100%;
   z-index: 1000;
   transition: background 0.3s;
+}
+
+.navbar .container, 
+.navbar .container-fluid {
+  padding-left: 0;
+  margin-left: 0;
+  max-width: 95%;
 }
 
 .navbar-brand {
@@ -26,14 +34,9 @@ body {
   margin-left: 0;
   padding-left: 0;
 }
-.navbar .container, 
-.navbar .container-fluid {
-  padding-left: 0;
-  margin-left: 0;
-}
 
 .navbar-brand img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
@@ -49,7 +52,7 @@ body {
   font-weight: 800;
   color: white;
   text-transform: uppercase;
-  text-shadow: none; /* Removes black outline */
+  text-shadow: none;
 }
 
 .brand-tagline {
@@ -58,11 +61,17 @@ body {
   color: #f0f0f0;
 }
 
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
 .navbar-nav .nav-link {
   position: relative;
   padding: 10px 20px;
-  margin-right: 15px;
-  font-size: 20px;
+  margin-right: 35px;
+  font-size: 22px;
   font-weight: 600;
   color: white !important;
   display: flex;
@@ -98,51 +107,7 @@ body {
   object-fit: cover;
 }
 
-/* Booking Box (Desktop) */
-.booking-box {
-  position: absolute;
-  top: 30%;
-  right: 5%;
-  transform: translateY(-20%);
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 320px;
-  z-index: 100;
-}
-
-.booking-box h5 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #00b894;
-}
-
-.booking-box .form-control {
-  border-radius: 8px;
-  padding-left: 35px;
-}
-
-.booking-box .input-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #00b894;
-}
-
-.booking-box button {
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: #00b894;
-  border: none;
-}
-
-.booking-box button:hover {
-  background-color: #019870;
-}
-
-/* Mobile Book Now Button */
+/* Mobile Book Now Floating Button */
 .mobile-book-btn {
   display: none;
   position: fixed;
@@ -158,17 +123,8 @@ body {
   z-index: 1000;
 }
 
-/* Mobile modal styling */
-@media (max-width: 768px) {
-  .booking-box {
-    display: none;
-  }
-  .mobile-book-btn {
-    display: block;
-  }
-  .modal-content {
-    border-radius: 12px;
-  }
+.modal-content {
+  border-radius: 12px;
 }
 
 /* Services Section */
@@ -230,7 +186,6 @@ body {
   position: fixed;
   width: 50px;
   height: 50px;
-  background-color: #25d366;
   color: white;
   border-radius: 50px;
   text-align: center;
@@ -248,7 +203,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Call button slightly above WhatsApp */
 .float-call {
   bottom: 80px;
   right: 20px;
@@ -258,100 +212,131 @@ body {
 .float-whatsapp {
   bottom: 20px;
   right: 20px;
+  background-color: #25d366;
 }
 
-/* Pulse Animation */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
-/* Reduce overall header height */
-.navbar {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
 
-/* Reduce brand logo size slightly */
-.navbar-brand img {
-  width: 80px; /* previously 100px */
-}
-
-/* Increase spacing between menu items */
-.navbar-nav .nav-link {
-  margin-right: 35px;  /* increased from 25px */
-  font-size: 20px;     /* keep it big */
-}
-
-/* Ensure alignment stays clean */
-.navbar .container-fluid {
-  max-width: 95%;  /* reduce header width */
-}
-/* Navbar links container */
-.navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-}
-
-/* Space links more evenly */
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;   /* Adjust width to spread links properly */
-}
-
-/* Bigger text */
-.navbar-nav .nav-link {
-  font-size: 22px;
-  padding: 10px 20px;
-}
-.navbar .container {
-  padding-left: 30px; /* Adjust space from left edge */
-}
-.booking-box {
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  width: 300px;
-  z-index: 100;
-}
-/* Force 3-column layout for reviews */
+/* Customer Reviews */
 .customer-reviews .col-md-4 {
   flex: 0 0 33.3333%;
   max-width: 33.3333%;
 }
 
-/* Make cards equal height */
 .customer-reviews .d-flex {
   display: flex;
   align-items: stretch;
 }
-/* Hero Book Now Button */
-.hero-booknow-btn {
-  font-size: 2rem;
-  border-radius: 50px;
-  padding: 15px 50px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
+
+/* Hero Book Now Container */
+.hero-booknow-fixed {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.booknow-container {
+  background-color: rgba(0, 128, 0, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10; /* Lower than navbar but above carousel */
 }
 
-.hero-booknow-btn:hover {
-  background-color: #218838;
-  transform: translate(-50%, -50%) scale(1.05);
+.hero-booknow-fixed .enquiry-text {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Ensure button does not overlap footer or other sections */
-.carousel {
-  position: relative;
-  min-height: 500px;
+.hero-booknow-fixed a {
+  font-size: 1.3rem;
+  border-radius: 50px;
 }
 
+/* Desktop Hero Enquiry Box */
+.hero-enquiry-box {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  background-color: rgba(0, 128, 0, 0.9);
+  color: white;
+  padding: 20px 30px;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+/* =========================
+   Mobile Responsive Styles
+   ========================= */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-brand img { width: 45px; }
+  .brand-text .brand-name { font-size: 0.85rem; word-break: break-word; }
+  .brand-text .brand-tagline { font-size: 0.6rem; }
+  .navbar-nav { width: 100%; justify-content: flex-start; }
+  .navbar-nav .nav-link { margin-right: 10px; font-size: 18px; }
+
+  /* Tariff Cards */
+  .card img { height: 180px; }
+
+  /* Why Choose Us Section (make 2 per row) */
+  .why-choose-us .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 15px;
+  }
+
+  /* Customer Reviews (stack vertically) */
+  .customer-reviews .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Floating buttons smaller */
+  .float-whatsapp, .float-call {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  /* Book Now Container */
+  .booknow-container {
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+  .hero-booknow-fixed {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+  .hero-booknow-fixed a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  /* Hero Enquiry Box */
+  .hero-enquiry-box {
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Service and Card Padding */
+  .service-card, .card .card-body { padding: 12px; }
+}

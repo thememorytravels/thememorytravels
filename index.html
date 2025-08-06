@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-      <img src="images/logo.png" alt="Logo" width="60" class="me-2">
+      <img src="images/logo.png" alt="Logo" width="80" class="me-2">
       <div class="brand-text">
         <div class="brand-name">The Memory Travels & Tours</div>
         <div class="brand-tagline">Driven by Memories, Powered by Trust</div>
@@ -39,19 +39,23 @@
 <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/taxi1.jpg" class="d-block w-100" alt="Taxi 1">
+      <img src="images/taxi1.jpg" class="d-block w-100" alt="Taxi 1" loading="lazy">
     </div>
     <div class="carousel-item">
-      <img src="images/taxi2.jpg" class="d-block w-100" alt="Taxi 2">
+      <img src="images/taxi2.jpg" class="d-block w-100" alt="Taxi 2" loading="lazy">
     </div>
   </div>
-
-  <!-- Centered Book Now Button -->
-  <a href="booking.html" class="hero-booknow-btn">
-    🚖 Book Now
-  </a>
 </div>
 
+<!-- Book Now Fixed Box -->
+<div class="hero-booknow-fixed">
+  <div class="booknow-container">
+    <p class="enquiry-text">For Bookings & Enquiries</p>
+    <a href="booking.html" class="btn btn-light btn-lg px-4 py-2 shadow-lg">
+      🚖 Book Now
+    </a>
+  </div>
+</div>
 
 <!-- Services Section -->
 <section class="services-section py-5 bg-light">
@@ -70,40 +74,40 @@
   <h2 class="text-center text-success mb-4">Our Tariffs</h2>
   <div class="row g-4">
     <!-- Sedan -->
-<div class="col-md-4">
-  <div class="card shadow">
-    <img src="images/sedan.jpg" class="card-img-top" alt="Sedan">
-    <div class="card-body text-center">
-      <h5 class="card-title text-success">Sedan</h5>
-      <p class="card-text">Starts at ₹13/km</p>
-      <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="images/sedan.jpg" class="card-img-top" alt="Sedan" loading="lazy">
+        <div class="card-body text-center">
+          <h5 class="card-title text-success">Sedan</h5>
+          <p class="card-text">Starts at ₹13/km</p>
+          <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- SUV -->
-<div class="col-md-4">
-  <div class="card shadow">
-    <img src="images/suv.jpg" class="card-img-top" alt="SUV">
-    <div class="card-body text-center">
-      <h5 class="card-title text-success">SUV</h5>
-      <p class="card-text">Starts at ₹18/km</p>
-      <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+    <!-- SUV -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="images/suv.jpg" class="card-img-top" alt="SUV" loading="lazy">
+        <div class="card-body text-center">
+          <h5 class="card-title text-success">SUV</h5>
+          <p class="card-text">Starts at ₹18/km</p>
+          <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Tempo Traveller -->
-<div class="col-md-4">
-  <div class="card shadow">
-    <img src="images/tempo.jpg" class="card-img-top" alt="Tempo Traveller">
-    <div class="card-body text-center">
-      <h5 class="card-title text-success">Tempo Traveller</h5>
-      <p class="card-text">Starts at ₹23/km</p>
-      <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+    <!-- Tempo Traveller -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="images/tempo.jpg" class="card-img-top" alt="Tempo Traveller" loading="lazy">
+        <div class="card-body text-center">
+          <h5 class="card-title text-success">Tempo Traveller</h5>
+          <p class="card-text">Starts at ₹23/km</p>
+          <a href="booking.html" class="btn btn-outline-success">Book Now</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </div>
 </section>
 
@@ -128,16 +132,12 @@
         <div class="p-4 shadow rounded bg-white h-100 w-100">
           <p class="fst-italic">"Excellent service! The driver was punctual and very polite. Will definitely book again."</p>
           <div class="d-flex align-items-center mt-3">
-            <img src="images/user1.jpg" class="rounded-circle me-3" alt="User 1" width="50" height="50">
+            <img src="images/user1.jpg" class="rounded-circle me-3" alt="User 1" width="50" height="50" loading="lazy">
             <div>
               <h6 class="mb-0">Rajesh Kumar</h6>
               <small class="text-muted">Business Trip</small>
               <div class="text-warning mt-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
             </div>
           </div>
@@ -149,16 +149,12 @@
         <div class="p-4 shadow rounded bg-white h-100 w-100">
           <p class="fst-italic">"Affordable prices and a comfortable ride. Booking was super easy and hassle-free."</p>
           <div class="d-flex align-items-center mt-3">
-            <img src="images/user2.jpg" class="rounded-circle me-3" alt="User 2" width="50" height="50">
+            <img src="images/user2.jpg" class="rounded-circle me-3" alt="User 2" width="50" height="50" loading="lazy">
             <div>
               <h6 class="mb-0">Priya Sharma</h6>
               <small class="text-muted">Family Trip</small>
               <div class="text-warning mt-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
             </div>
           </div>
@@ -170,16 +166,12 @@
         <div class="p-4 shadow rounded bg-white h-100 w-100">
           <p class="fst-italic">"Great experience! The cab was clean, driver knew the routes well, and was very friendly."</p>
           <div class="d-flex align-items-center mt-3">
-            <img src="images/user3.jpg" class="rounded-circle me-3" alt="User 3" width="50" height="50">
+            <img src="images/user3.jpg" class="rounded-circle me-3" alt="User 3" width="50" height="50" loading="lazy">
             <div>
               <h6 class="mb-0">Anil Mehta</h6>
               <small class="text-muted">Weekend Getaway</small>
               <div class="text-warning mt-1">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
             </div>
           </div>
