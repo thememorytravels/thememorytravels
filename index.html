@@ -45,74 +45,10 @@
       <img src="images/taxi2.jpg" class="d-block w-100" alt="Taxi 2">
     </div>
 
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-
-  <!-- Booking Form Floating -->
-  <div class="booking-box card p-4 shadow position-absolute">
-    <h5 class="text-center mb-3 text-success">Book Your Ride</h5>
-    <form id="bookingForm">
-
-      <!-- Full Name -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-user input-icon"></i>
-        <input type="text" class="form-control" name="name" id="name"
-          placeholder="Full Name" pattern="[A-Za-z\s]+"
-          title="Only Alphabets allowed" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Mobile Number -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-phone input-icon"></i>
-        <input type="tel" class="form-control" name="phone" id="phone"
-          placeholder="Mobile Number" pattern="[0-9+]+"
-          title="Only Numbers allowed" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Location -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-location-dot input-icon"></i>
-        <input type="text" class="form-control" placeholder="Pickup Location"
-          name="pickup" id="pickup" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Drop Location -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-map-marker-alt input-icon"></i>
-        <input type="text" class="form-control" placeholder="Drop Location"
-          name="drop" id="drop" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Date -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-calendar-days input-icon"></i>
-        <input type="date" class="form-control" name="date" id="date" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Pickup Time -->
-      <div class="mb-3 position-relative">
-        <i class="fa-solid fa-clock input-icon"></i>
-        <input type="time" class="form-control" name="time" id="time" required>
-        <small class="text-danger error-message"></small>
-      </div>
-
-      <!-- Book Now -->
-      <button type="submit" id="bookNowBtn" class="btn btn-success w-100" disabled>
-        Book Now
-      </button>
-    </form>
-  </div>
-</div>
+<a href="booking.html" class="btn btn-success btn-lg px-5 py-3 position-absolute top-50 start-50 translate-middle shadow-lg" 
+   style="font-size: 2rem; border-radius: 50px;">
+  🚖 Book Now
+</a>
 
 <!-- Mobile Book Now Button -->
 <button class="mobile-book-btn" data-bs-toggle="modal" data-bs-target="#mobileBookingModal">
