@@ -254,16 +254,17 @@ html, body {
   transform: translateY(-50%);
   z-index: 10;
   text-align: center;
-}
+    /* Prevent CLS */
+  width: 260px; /* or your estimated width */
+  min-height: 150px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.01); /* invisible, just to reserve space */
 
-.booknow-container {
-  background-color: rgba(0, 128, 0, 0.85);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
+.hero-booknow-fixed a {
+  font-size: 1.3rem;
+  border-radius: 50px;
+}
 .hero-booknow-fixed .enquiry-text {
   color: white;
   font-size: 1.2rem;
@@ -271,9 +272,18 @@ html, body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.hero-booknow-fixed a {
-  font-size: 1.3rem;
-  border-radius: 50px;
+  .hero-booknow-fixed a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+
+.booknow-container {
+  background-color: rgba(0, 128, 0, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Desktop Hero Enquiry Box */
@@ -310,7 +320,13 @@ html, body {
     max-width: 50%;
     margin-bottom: 15px;
   }
-
+.hero-booknow-fixed {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  width: 260px;  /* same width for layout stability */
+  min-height: 150px;
+}
   /* Customer Reviews (stack vertically) */
   .customer-reviews .col-md-4 {
     flex: 0 0 100%;
@@ -328,16 +344,6 @@ html, body {
   .booknow-container {
     padding: 12px 15px;
     border-radius: 10px;
-  }
-  .hero-booknow-fixed {
-    left: 50%;
-    right: auto;
-    transform: translate(-50%, -50%);
-    width: auto;
-  }
-  .hero-booknow-fixed a {
-    font-size: 1rem;
-    padding: 8px 16px;
   }
 
   /* Hero Enquiry Box */
@@ -443,7 +449,7 @@ h1, h2, h3 {
 }
 @font-face {
   font-family: 'Playfair Display';
-  src: url('fonts/PlayfairDisplay.woff2') format('woff2');
+  src: url('/fonts/playfair-display/playfair-display-v39-latin-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
