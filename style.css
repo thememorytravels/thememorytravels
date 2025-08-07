@@ -62,8 +62,9 @@ html, body {
 
 .navbar-nav {
   display: flex;
-  justify-content: space-between;
-  width: 60%;
+  justify-content: flex-start;
+  width: auto;
+  gap: 20px;
 }
 
 .navbar-nav .nav-link {
