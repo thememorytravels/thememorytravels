@@ -340,3 +340,11 @@ html, body {
   /* Service and Card Padding */
   .service-card, .card .card-body { padding: 12px; }
 }
+.navbar .container {
+  padding-left: 1rem;       /* Restores space inside container */
+  padding-right: 1rem;
+}
+
+.navbar-brand {
+  margin-left: 0 !important; /* Ensures brand is aligned left */
+}
