@@ -358,24 +358,33 @@ html, body {
   right: 20px;
   background-color: #28a745;
   color: white;
-  padding: 10px 16px;
-  border-radius: 30px;
-  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 13px;
   font-weight: 600;
   z-index: 1000;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+  animation: pulse 1.5s infinite;
   font-family: inherit;
   border: none;
   cursor: pointer;
 }
 
 .float-booknow:hover {
+  transform: scale(1.08);
   background-color: #218838;
-  text-decoration: none; /* ensures no underline on hover */
+  text-decoration: none;
 }
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 
 .float-booknow:hover {
   transform: scale(1.1);
