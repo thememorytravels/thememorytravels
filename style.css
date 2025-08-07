@@ -427,13 +427,6 @@
   height: 1px;
   overflow: hidden;
 }
-body {
-  font-size-adjust: 0.5;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-}
 
 #heroCarousel .carousel-item {
   display: flex;
