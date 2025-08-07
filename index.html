@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Memory Travels & Tours | Taxi Services in Chennai</title>
 
+  <link rel="preload" as="image" href="images/taxi1.webp" fetchpriority="high">
+
+
     <!-- SEO Meta Tags -->
   <meta name="description" content="The Memory Travels & Tours offers trusted and affordable taxi services in Chennai. Book now for local and outstation travel." />
   <meta name="keywords" content="Chennai taxi, cab booking Chennai, The Memory Travels, outstation cabs, affordable taxis" />
@@ -23,9 +26,11 @@
   <meta name="twitter:description" content="Book trusted and affordable taxi services in Chennai. Local and outstation rides available." />
   <meta name="twitter:image" content="https://www.thememorytravels.com/images/share-banner.jpg" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css?v=2.1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
 
 <script type="application/ld+json">
 {
@@ -96,10 +101,18 @@
 <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/taxi1.webp" class="d-block w-100" alt="Taxi 1" loading="lazy" width="3936" height="2624">
+      <picture>
+  <source srcset="images/taxi1-small.webp" media="(max-width: 768px)">
+  <img src="images/taxi1.webp" class="d-block w-100" alt="Taxi 1" loading="lazy" width="3936" height="2624">
+</picture>
+
     </div>
     <div class="carousel-item">
-      <img src="images/taxi2.webp" class="d-block w-100" alt="Taxi 2" loading="lazy" width="4868" height="3245">
+  <picture>
+  <source srcset="images/taxi2-small.webp" media="(max-width: 768px)">
+  <img src="images/taxi2.webp" class="d-block w-100" alt="Taxi 2" loading="lazy" width="4868" height="3245">
+</picture>
+
     </div>
   </div>
 </div>
@@ -256,7 +269,7 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917200706494?text=Hi%2C%20I%20would%20like%20to%20book%20a%20taxi%20with%20The%20Memory%20Travels%20%26%20Tours." target="_blank" class="float-whatsapp"><i class="fab fa-whatsapp"></i></a>
