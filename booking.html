@@ -44,7 +44,7 @@
         <!-- Full Name -->
         <div class="mb-3">
           <label class="form-label">Full Name</label>
-          <input type="text" class="form-control" name="name" id="name" 
+          <input type="text" class="form-control" name="name" id="name" placeholder="Required" 
                  pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" required>
           <small class="text-danger error-message"></small>
         </div>
@@ -52,7 +52,7 @@
         <!-- Phone -->
         <div class="mb-3">
           <label class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" name="phone" id="phone" 
+          <input type="tel" class="form-control" name="phone" id="phone" placeholder="Required"
                  pattern="[0-9+]{10,15}" title="Only numbers and + allowed" required>
           <small class="text-danger error-message"></small>
         </div>
@@ -60,21 +60,21 @@
         <!-- Email -->
         <div class="mb-3">
           <label class="form-label">Email (optional)</label>
-          <input type="email" class="form-control" name="email" id="email">
+          <input type="email" class="form-control" name="email" id="email" placeholder="optional">
           <small class="text-danger error-message"></small>
         </div>
 
         <!-- Pickup -->
         <div class="mb-3">
           <label class="form-label">Pickup Location</label>
-          <input type="text" class="form-control" name="pickup" id="pickup" required>
+          <input type="text" class="form-control" name="pickup" id="pickup" placeholder="Required" required>
           <small class="text-danger error-message"></small>
         </div>
 
         <!-- Drop -->
         <div class="mb-3">
           <label class="form-label">Drop Location</label>
-          <input type="text" class="form-control" name="drop" id="drop" required>
+          <input type="text" class="form-control" name="drop" id="drop" placeholder="Required" required>
           <small class="text-danger error-message"></small>
         </div>
 
@@ -110,10 +110,10 @@
           <select class="form-select" name="carType" id="carType" required>
             <option value="">Select Car</option>
             <option>Sedan</option>
-            <option>SUV</option>
-            <option>Innova</option>
+            <option>SUV 6+1</option>
+            <option>SUV 7+1</option>
             <option>Innova Crysta</option>
-            <option>Tavera</option>
+            <option>Tavera 8+1/9+1</option>
             <option>Tempo Traveller</option>
             <option>Bus/Van/Coach</option>
           </select>
@@ -128,12 +128,24 @@
 
         <!-- Send method -->
         <div class="mb-3">
-          <label class="form-label">Send Booking Via</label>
+          <label class="form-label">Send Booking Using:</label>
           <div>
             <input type="radio" name="sendMethod" value="whatsapp" checked>
             <label>WhatsApp</label>
             <input type="radio" name="sendMethod" value="email" class="ms-3">
             <label>Email</label>
+          </div>
+        </div>
+        <!-- AC / Non AC -->
+        <div class="mb-3">
+          <label class="form-label">Vehicle Type</label>
+          <div>
+            <input type="radio" name="vehicletype" value="ac" checked>
+            <label>AC</label>
+            <input type="radio" name="vehicletype" value="non-ac" class="ms-3">
+            <label>Non-AC</label>
+            <input type="radio" name="vehicletype" value="no preference" class="ms-3">
+            <label>No Preference</label>
           </div>
         </div>
 
@@ -143,8 +155,8 @@
           <div>
             <input type="radio" name="callback" value="Immediate" checked>
             <label>Immediate</label>
-            <input type="radio" name="callback" value="Working Hours" class="ms-3">
-            <label>During Working Hours</label>
+            <input type="radio" name="callback" value="anytime" class="ms-3">
+            <label>Anytime</label>
           </div>
         </div>
 
@@ -219,6 +231,7 @@
     const carType = document.getElementById('carType').value;
     const message = document.getElementById('message').value;
     const callbackPref = document.querySelector('input[name="callback"]:checked').value;
+    const vehicletype = document.querySelector('input[name="vehicletype"]:checked').value;
     const sendMethod = document.querySelector('input[name="sendMethod"]:checked').value;
 
     const bookingMessage = `Booking Request:
@@ -231,6 +244,7 @@ Date: ${date}
 Time: ${time}
 Trip Type: ${tripType}
 Car Type: ${carType}
+Vehicle Type: ${vehicletype}
 Callback Preference: ${callbackPref}
 Message: ${message}`;
 
@@ -241,7 +255,7 @@ Message: ${message}`;
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name, phone, email, pickup, drop, date, time, tripType, carType, callbackPref, message
+          name, phone, email, pickup, drop, date, time, tripType, carType, vehicletype,callbackPref, message
         })
       })
       .then(response => {
