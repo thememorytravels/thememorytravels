@@ -281,14 +281,16 @@
   }
 }
 
-
-
 .booknow-container {
   background-color: rgba(0, 128, 0, 0.85);
   padding: 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  /* CLS Fix */
+  min-height: 150px; /* estimate based on content */
+  width: 260px;       /* same as .hero-booknow-fixed */
 }
 
 /* Desktop Hero Enquiry Box */
