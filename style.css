@@ -100,7 +100,10 @@
 #heroCarousel .carousel-item {
   height: 100%;
 }
-
+#heroCarousel .carousel-inner {
+  min-height: 400px;
+  padding-top: 1px; /* fixes early paint empty layout */
+}
 #heroCarousel .carousel-item img {
   width: 100%;
   height: 100%;
@@ -133,6 +136,9 @@
 /* Services Section */
 .services-section h2 {
   font-weight: bold;
+}
+.services-section .row.g-4 {
+  min-height: 400px;
 }
 
 .service-card {
