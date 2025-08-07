@@ -354,13 +354,13 @@ html, body {
 }
 .float-booknow {
   position: fixed;
-  bottom: 120px;           /* Slightly higher for a cleaner look */
-  right: 15px;             /* Nudge closer to the edge */
+  bottom: 160px; /* Raised enough above call & WhatsApp buttons */
+  right: 15px;
   background-color: #28a745;
   color: white;
-  padding: 8px 10px;       /* Smaller padding */
+  padding: 10px 14px;
   border-radius: 20px;
-  font-size: 10px;         /* Slightly smaller font */
+  font-size: 12px;
   font-weight: 600;
   z-index: 1000;
   text-decoration: none;
@@ -369,9 +369,11 @@ html, body {
   transition: transform 0.3s ease, background-color 0.3s ease;
   animation: pulse 2s infinite;
 }
+
 .float-booknow:hover {
   transform: scale(1.05);
   background-color: #218838;
+  opacity: 0.9;
   text-decoration: none;
 }
 
@@ -383,11 +385,12 @@ html, body {
 
 @media (max-width: 768px) {
   .float-booknow {
-    bottom: 90px;         /* Adjust for mobile */
+    bottom: 130px; /* Still raised for mobile */
     font-size: 11px;
-    padding: 5px 10px;
+    padding: 8px 12px;
   }
 }
+
 
 .float-booknow:hover {
   transform: scale(1.1);
