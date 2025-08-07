@@ -380,3 +380,7 @@ html, body {
     bottom: 120px;
   }
 }
+.float-booknow {
+  font-size: 18px;
+  padding: 12px 22px;
+}
