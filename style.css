@@ -20,12 +20,12 @@ html, body {
   transition: background 0.3s;
 }
 
-.navbar .container, 
+/* .navbar .container, 
 .navbar .container-fluid {
   padding-left: 0;
   margin-left: 0;
   max-width: 95%;
-}
+} */
 
 .navbar-brand {
   display: flex;
