@@ -341,10 +341,11 @@ html, body {
   .service-card, .card .card-body { padding: 12px; }
 }
 .navbar .container {
-  padding-left: 1rem;       /* Restores space inside container */
-  padding-right: 1rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
-
 .navbar-brand {
   margin-left: 0 !important; /* Ensures brand is aligned left */
 }
