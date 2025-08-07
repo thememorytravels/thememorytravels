@@ -300,7 +300,10 @@
   min-height: 150px; /* estimate based on content */
   width: 260px;       /* same as .hero-booknow-fixed */
 }
-
+.booknow-container {
+  transition: none !important;
+  animation: none !important;
+}
 /* Desktop Hero Enquiry Box */
 .hero-enquiry-box {
   position: absolute;
@@ -353,12 +356,6 @@
     width: 40px;
     height: 40px;
     font-size: 20px;
-  }
-
-  /* Book Now Container */
-  .booknow-container {
-    padding: 12px 15px;
-    border-radius: 10px;
   }
 
   /* Hero Enquiry Box */
