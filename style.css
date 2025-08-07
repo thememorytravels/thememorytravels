@@ -358,20 +358,24 @@ html, body {
   right: 20px;
   background-color: #28a745;
   color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 10px 16px;
+  border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   z-index: 1000;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 .float-booknow:hover {
   background-color: #218838;
+  text-decoration: none; /* ensures no underline on hover */
 }
-
 
 .float-booknow:hover {
   transform: scale(1.1);
