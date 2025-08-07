@@ -354,7 +354,7 @@ html, body {
 }
 .float-booknow {
   position: fixed;
-  bottom: 122px; /* Just above WhatsApp & Call */
+  bottom: 140px; /* Just above WhatsApp & Call */
   right: 15px;
   background-color: #28a745;
   color: white;
